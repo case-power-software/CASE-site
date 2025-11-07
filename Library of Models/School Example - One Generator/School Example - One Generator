@@ -1,1 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../../case.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>School Example - One Generator</title>
+</head>
+<body>
+  <h2>School Example - One Generator</h2>
+  <p>The model contains two nodes, one generators the rated voltage of which is 110 kV, two lines, and external system which is used to model stiff power grid. Single line diagram with power flow calculation results is given in the next figure.</p>
+   <img src="School Example - One Generator.jpg" alt="School Example - One Generator"><br>
+  <p>For transient stability calculation, three phase short circuit is simulated on the one of the lines between nodes <b>Node 1</b> and <b>External</b>. Fault happens at the time t=1 s and is cleared at the time t=1.15 s.</p>
+  <a href="School Example - single generator.zip" download>
+  <button>Download Model</button>
+</a>
 
+</body>
+</html>
