@@ -7,11 +7,11 @@
 </head>
 <body>
   <h2>Power Flow</h2>
-  <p>There are three Newton-Raphson methods of AC power flow implemented in CASE:<br></p>
+  <p>Power flow is basic power system calculation. Its results are used as starting point for stability analyses or short circuit calculation if complete method is used. Power flow calculation can be classified into AC and DC. AC power flow calculation is iterative and prone to divergence, whereas DC is performed within single step. DC power flow is applicable only to transmission grids where line reactances are much greater than resistances (X >> R).<br> The most widely used AC power flow method is Newton–Raphson. There are three Newton-Raphson methods implemented in CASE:<br></p>
   <ol>
   <li><b>Regular</b> or <b>Full</b> - LU decomposition of Jacobian matrix is performed at each iteration.</li>
   <li><b>Modified</b> - LU decomposition of Jacobian matrix is performed only at initial iteration.</li>
-  <li><b>Combined</b> - LU decomposition of Jacobian matrix is performed only at the initial iteration and at subsequent iterations in which convergence rate drops below a specified threshold. This method is combination of previosu two methods and represents optimal method regarding calculation speed and accuracy. Scientific article is published in the Electric Power System Research journal related to Combined Newton-Raphson method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0378779615001650">Application of Combined Newton–Raphson Method to Large Load Flow Models</a>.</li>
+  <li><b>Combined</b> - LU decomposition of Jacobian matrix is performed only at the initial iteration and at subsequent iterations in which convergence rate drops below a specified threshold. This method is a combination of the previous two and represents the optimal balance of calculation speed and accuracy. Scientific article is published in the Electric Power System Research journal related to Combined Newton-Raphson method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0378779615001650">Application of Combined Newton–Raphson Method to Large Load Flow Models</a>.</li>
   </ol>
  </body>
 </html>
