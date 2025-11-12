@@ -8,5 +8,10 @@
 <body>
   <h1>Power Flow</h1>
   <p>There are three Newton-Raphson methods of AC power flow implemented in CASE:<br></p>
+  <ol>
+  <li>Regular or Full - LU decomposition of Jacobian matrix is performed at each iteration.</li>
+  <li>Modified - LU decomposition of Jacobian matrix is performed only at initial iteration.</li>
+  <li>Combined - LU decomposition of Jacobian matrix is performed only at the initial iteration and at subsequent iterations in which convergence rate drops below a specified threshold. This method is combination of previosu two methods and represents optimal method regarding calculation speed and accuracy. Scientific article is published in the Electric Power System Research journal related to Combined Newton-Raphson method </li>
+  </ol>
  </body>
 </html>
