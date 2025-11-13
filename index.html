@@ -35,12 +35,28 @@
   </div>
   <!--<video width="640" height="360" controls>-->
   <video width="1200" height="900" autoplay muted loop playsinline>
-    <source src="CASE demostration.mp4" type="video/mp4">
+    <source src="CASE demonstration.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  <script>
+  const video = document.getElementById("myVideo");
+  // Start at 4 second
+  video.addEventListener("loadedmetadata", () => {
+    video.currentTime = 4;
+  });
+
+  // Stop at 35 seconds and loop back to 4
+  video.addEventListener("timeupdate", () => {
+    if (video.currentTime >= 35) {
+      video.currentTime = 4; // jump back
+      video.play();          // continue playing
+    }
+  });
+  </script>
 </body>
 
 </html>
+
 
 
 
