@@ -34,12 +34,12 @@
   <img src="App Layout.png" alt="Application Layout" width="1260" height="800">
   </div>
   <!--<video width="640" height="360" controls>-->
-  <video width="1200" height="900" autoplay muted loop playsinline>
+  <video id="CASE_Demo_Video" width="1200" height="900" autoplay muted loop playsinline>
     <source src="CASE demonstration.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <script>
-  const video = document.getElementById("myVideo");
+  const video = document.getElementById("CASE_Demo_Video");
   // Start at 4 second
   video.addEventListener("loadedmetadata", () => {
     video.currentTime = 4;
@@ -56,6 +56,7 @@
 </body>
 
 </html>
+
 
 
 
