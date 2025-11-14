@@ -4,20 +4,6 @@
   <meta charset="UTF-8">
   <link rel="icon" href="case.ico" type="image/x-icon">
   <title>CASE</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh; /* full viewport height */
-      display: flex;
-      justify-content: center; /* horizontal center */
-      align-items: center;     /* vertical center */
-      background-color: black; /* optional */
-    }
-    video {
-      max-width: 100%;
-      max-height: 100%;
-    }
-  </style>
 </head>
 <body>
   <div style="text-align: center;">
@@ -48,10 +34,24 @@
   <img src="App Layout.png" alt="Application Layout" width="1260" height="800">
   </div>-->
   <!--<video width="640" height="360" controls>-->
-  <video id="CASE_Demo_Video" width="1200" height="900" autoplay muted loop playsinline>
-    <source src="Videos/CASE demonstration.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="video-container">
+    <video id="CASE_Demo_Video" width="1200" height="900" autoplay muted loop playsinline>
+      <source src="Videos/CASE demonstration.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <style>
+  .video-container {
+    position: relative;
+    height: 100vh;               /* full viewport height */
+  }
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  </style>
   <script>
   const video = document.getElementById("CASE_Demo_Video");
   // Start at 2 second
@@ -70,6 +70,7 @@
 </body>
 
 </html>
+
 
 
 
