@@ -41,24 +41,20 @@
     </video>
   </div>
   <style>
-    /* Container fills the entire viewport */
     .video-container {
       position: relative;
-      /*width: 100vw;*/   /* full viewport width */
+      width: 100vw;   /* full viewport width */
       height: 100vh;  /* full viewport height */
-      overflow: hidden; /* hide anything spilling outside */
-      /*background: black;*/ /* fallback background */
+      background: black;
+      overflow: hidden;
     }
 
-    /* Video fills container without gaps */
     .video-container video {
-      position: absolute;
-      top: 0%;
-      left: 50%;
-      /*width: 100%;
-      height: 100%;*/
-      transform: translate(-50%, 0%);
-      /*object-fit: cover;*/ /* ensures video covers container */
+      display: block;
+      margin: 0 auto;          /* center horizontally */
+      position: relative;
+      top: 0;                  /* align top edge with container */
+      transform: translateY(50%); /* push video down by half of remaining space */
     }
   </style>
   <script>
@@ -79,6 +75,7 @@
 </body>
 
 </html>
+
 
 
 
