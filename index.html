@@ -42,20 +42,17 @@
   </div>
   <style>
     .video-container {
-      position: relative;
-      width: 100vw;   /* full viewport width */
-      height: 100vh;  /* full viewport height */
-      /*background: black;
-      overflow: hidden;*/
-    }
-
-    .video-container video {
-      display: block;
-      margin: 0 auto;          /* center horizontally */
-      position: relative;
-      top: 0;                  /* align top edge with container */
-      transform: translateY(-50%); /* push video down by half of remaining space */
-    }
+    position: relative;
+    height: 100vh;               /* full viewport height */
+  }
+  .video-container video {
+    position: absolute;
+    /*moves the video’s top-left corner to the middle.*/
+    top: 50%;
+    left: 50%;
+    /*shifts it back by half its own width and height, so the video is perfectly centered.*/
+    transform: translate(-50%, -50%);
+  }
   </style>
   <script>
   const video = document.getElementById("CASE_Demo_Video");
@@ -75,6 +72,7 @@
 </body>
 
 </html>
+
 
 
 
