@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../../case.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>Seven Nodes Model</title>
+  <style>
+    /* List with spacing */
+    .spaced li {
+      margin-bottom: 10px;   /* adds vertical spacing */
+      line-height: 1.4;      /* improves readability */
+    }
+
+    /* List without spacing (default browser rendering) */
+    .compact li {
+      margin-bottom: 0;      /* no extra spacing */
+      line-height: 1.0;      /* tight text */
+    }
+  </style>
+  <style>
+    /* General list reset */
+    ol {
+      margin: 0;              /* remove default top/bottom margins */
+      padding-left: 20px;     /* keep indentation */
+    }
+
+    /* Default list item style */
+    ol li {
+      line-height: 1.2;       /* tighter line spacing */
+    }
+
+    /* Adjust spacing individually */
+    li.item1 {
+      margin-bottom: 2px;     /* small gap after first item */
+      color: darkblue;        /* optional styling */
+    }
+
+    li.item2 {
+      margin-bottom: 8px;     /* larger gap after second item */
+      font-weight: bold;      /* optional styling */
+    }
+
+    li.item3 {
+      margin-bottom: 0;       /* no gap after third item */
+      font-style: italic;     /* optional styling */
+    }
+
+    li.item4 {
+      margin-bottom: 4px;     /* moderate gap */
+      text-decoration: underline; /* optional styling */
+    }
+
+    li.item5 {
+      margin-bottom: 4px;     /* moderate gap */
+    }
+  </style>
+</head>
+<body>
+  <h2>Seven Nodes Model</h2>
+  <p>The model contains:<br></p>
+  <ol class="spaced">
+    <li class="item5">Seven nodes - </li> 
+    <li class="item5">three synchronous generating units - two hydro units with salient‑pole rotors and one thermal unit with a cylindrical rotor, </li>
+    <li class="item5">two transformers - one three winding and one two winding, and</li> 
+    <li class="item5">all three phases are broken</li> 
+  </ol>
+   <img src="Seven Nodes Model.jpg" alt="Seven Nodes Model Figure"><br>
+  <p>For transient stability calculation, three phase short circuit is simulated on the one of the lines between nodes <b>Node 1</b> and <b>Node 2</b>. Fault occurs at t=1 s and is cleared at t=1.15 s by disconnecting the faulted line.</p>
+  <a href="ThreeWndg.zip" download>
+  <button>Download Seven Nodes Model</button>
+</a>
+
+</body>
+</html>
