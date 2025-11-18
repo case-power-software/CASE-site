@@ -7,17 +7,19 @@
 </head>
 <body>
   <h2>Open Conductor Faults</h2>
+  <h3>Theoretical Review</h3>
   <p style="text-align: justify;">Open conductor faults are series faults in a power system where one, two or even all three conductors of a power system element are disconnected, creating new unbalanced or balanced system state. It is a series fault unlike short circuits, which are shunt faults. The next figure illustrates all three cases:</p>
 <ol>
 <li>phase "a" is broken, </li>
 <li>phases "b" and "c" are broken, and</li> 
 <li>all three phases are broken</li> 
-As shown in the figure, the conductor(s) of the line between nodes "m" and "n" are broken at location "p".
 </ol>
+<p>As shown in the figure, the conductor(s) of the line between nodes "m" and "n" are broken at location "p".</p>
   <div style="text-align: center;">
   <img src="OpenConductorFaults.png" alt="OpenConductorFaults">
   </div>
   <ol>
+  <h3>CASE Implementation</h3>
   <li><b>Regular</b> or <b>Full</b> - LU decomposition of Jacobian matrix is performed at each iteration.</li>
   <li><b>Modified</b> - LU decomposition of Jacobian matrix is performed only at initial iteration.</li>
   <li><b>Combined</b> - LU decomposition of Jacobian matrix is performed only at the initial iteration and at subsequent iterations in which convergence rate drops below a specified threshold. This method is a combination of the previous two and represents the optimal balance of calculation speed and accuracy. Scientific article is published in the Electric Power System Research journal related to Combined Newton-Raphson method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0378779615001650">Application of Combined Newton–Raphson Method to Large Load Flow Models</a>.</li>
