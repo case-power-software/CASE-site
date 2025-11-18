@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <link rel="icon" href="../case.ico" type="image/x-icon">
   <title>Open Conductor Faults</title>
+  <style>
+    /* List with spacing */
+    .spaced li {
+      margin-bottom: 5px;   /* adds vertical spacing */
+      line-height: 1.2;      /* improves readability */
+    }
+
+    /* List without spacing (default browser rendering) */
+    .compact li {
+      margin-bottom: 0;      /* no extra spacing */
+      line-height: 1.0;      /* tight text */
+    }
+  </style>
 </head>
 <body>
   <h2>Open Conductor Faults</h2>
   <h3>Theoretical Review</h3>
   <p style="text-align: justify;">Open conductor faults are series faults in a power system where one, two or even all three conductors of a power system element are disconnected, creating new unbalanced or balanced system state. It is a series fault unlike short circuits, which are shunt faults. The next figure illustrates all three cases:</p>
-<ol>
+<ol style="spaced">
 <li>phase "a" is broken, </li>
 <li>phases "b" and "c" are broken, and</li> 
 <li>all three phases are broken</li> 
