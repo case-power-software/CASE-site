@@ -17,21 +17,54 @@
       line-height: 1.0;      /* tight text */
     }
   </style>
+   <style>
+    /* General list reset */
+    ul {
+      margin: 0;              /* remove default top/bottom margins */
+      padding-left: 20px;     /* keep indentation */
+    }
+
+    /* Default list item style */
+    ul li {
+      line-height: 1.2;       /* tighter line spacing */
+    }
+
+    /* Adjust spacing individually */
+    li.item1 {
+      margin-bottom: 2px;     /* small gap after first item */
+      color: darkblue;        /* optional styling */
+    }
+
+    li.item2 {
+      margin-bottom: 8px;     /* larger gap after second item */
+      font-weight: bold;      /* optional styling */
+    }
+
+    li.item3 {
+      margin-bottom: 0;       /* no gap after third item */
+      font-style: italic;     /* optional styling */
+    }
+
+    li.item4 {
+      margin-bottom: 4px;     /* moderate gap */
+      text-decoration: underline; /* optional styling */
+    }
+  </style>
 </head>
 <body>
   <h2 style="text-align: center;">Open Conductor Faults</h2>
   <h3 style="text-align: center;">Theoretical Review</h3>
   <p style="text-align: justify;">Open conductor faults are series faults in a power system where one, two or even all three conductors of a power system element are disconnected, creating new unbalanced or balanced system state. It is a series fault unlike short circuits, which are shunt faults. The next figure illustrates all three cases:</p>
 <ol class="spaced">
-<li>phase "a" is broken, </li>
-<li>phases "b" and "c" are broken, and</li> 
-<li>all three phases are broken</li> 
+<li class="item1">phase "a" is broken, </li>
+<li class="item2">phases "b" and "c" are broken, and</li> 
+<li class="item4">all three phases are broken</li> 
 </ol>
 <p>As shown in the figure, the conductor(s) of the line between nodes "m" and "n" are broken at location "p".</p>
   <div style="text-align: center;">
   <img src="OpenConductorFaults.png" alt="OpenConductorFaults">
   </div>
-<h3 style="text-align: center";>CASE Implementation</h3>
-  
+  <h3 style="text-align: center";>CASE Implementation</h3>
+  <p>Calculation of open conductor faults has been implemented in CASE as static calculation, like short circuits. CASE supports calculation of open conductor faults on lines, transformers, generators, and loads.</p>
  </body>
 </html>
