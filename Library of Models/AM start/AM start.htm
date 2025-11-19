@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../../case.ico" type="image/x-icon">
+  <title>Asynchronous Motor Start</title>
+  <style>
+    /* List with spacing */
+    .spaced li {
+      margin-bottom: 5px;   /* adds vertical spacing */
+      line-height: 1.2;      /* improves readability */
+    }
 
+    /* List without spacing (default browser rendering) */
+    .compact li {
+      margin-bottom: 0;      /* no extra spacing */
+      line-height: 1.0;      /* tight text */
+    }
+  </style>
+   <style>
+    /* General list reset */
+    ol {
+      margin: 0;              /* remove default top/bottom margins */
+      padding-left: 20px;     /* keep indentation */
+    }
+
+    /* Default list item style */
+    ol li {
+      line-height: 1.2;       /* tighter line spacing */
+    }
+
+    /* Adjust spacing individually */
+    li.item1 {
+      margin-bottom: 2px;     /* small gap after first item */
+      color: darkblue;        /* optional styling */
+    }
+
+    li.item2 {
+      margin-bottom: 8px;     /* larger gap after second item */
+      font-weight: bold;      /* optional styling */
+    }
+
+    li.item3 {
+      margin-bottom: 0;       /* no gap after third item */
+      font-style: italic;     /* optional styling */
+    }
+
+    li.item4 {
+      margin-bottom: 4px;     /* moderate gap */
+      text-decoration: underline; /* optional styling */
+    }
+
+    li.item5 {
+      margin-bottom: 4px;     /* moderate gap */
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Asynchronous Motor Start</h2>
+  <p style="text-align: justify; margin-bottom: 4px;">Open conductor faults are series faults in a power system where one, two or even all three conductors of a power system element are disconnected, creating new unbalanced or balanced system state. It is a series fault unlike short circuits, which are shunt faults. The next figure illustrates all three cases:</p>
+<ol class="spaced">
+<li class="item5">phase "a" is broken, </li>
+<li class="item5">phases "b" and "c" are broken, and</li> 
+<li class="item5">all three phases are broken</li> 
+</ol>
+<p>As shown in the figure, the conductor(s) of the line between nodes "m" and "n" are broken at location "p".</p>
+  <div style="text-align: center;">
+  <img src="Figures/OpenConductorFaults.png" alt="OpenConductorFaults">
+  </div>
+  <p style="text-align: center;">Fig. 1. Three types of open conductor faults.</p>
+  <h3 style="text-align: center";>CASE Implementation</h3>
+  <p style="text-align: justify;">Calculation of open conductor faults has been implemented in CASE as static calculation, like short circuits. CASE supports calculation of open conductor faults on lines, transformers, generators, and loads. By clicking "Open Conductors" button in the ribbon, the dialog window for calculation of open conductor faults is lunched. There are four tabs in the dialog, each for one type of power system element. When lines are selected, the distance between the first and second line node must be specified as a percentage (in this case, 40%), as illustrated in the next figure. This indicates that the parameters of the line from the first node to the fault correspond to 40% of the total line parameters.</p>
+  <div style="text-align: center;">
+  <img src="Figures/OCF_CASE_1.png" alt="CASE Implementation - Figure 1" width="1536" height="840">
+  </div>
+  <p style="text-align: center;">Fig. 2. Launching open conductor faults module.</p>
+  <p>Since all three cases for open conductor fault are selected for calculation (1 phase open (PO) = TRUE, 2 PO = TRUE, 3 PO = TRUE), clicking button "Calculate" results of calculation for all three cases are printed in "Convergence and Results" window, as shown in the next figure. Conductor has two broken ends at the fault location, denoted as <i>p</i> and <i>p'</i> in the Fig. 1. CASE outputs the following at the fault location: voltages between the broken ends (Vpp′a(b)(c)), phase voltages on each side of the broken line (Vpa(b)(c) and Vp′a(b)(c)), and line voltages on each side of the broken line (Vpab(c) and Vp′ab(c)).</p>
+  <div style="text-align: center;">
+  <img src="Figures/OCF_CASE_2.png" alt="CASE Implementation - Figure 1" width="1536" height="840">
+  </div>
+  <p style="text-align: center;">Fig. 3. Results of calculation.</p>
+ </body>
+</html>
