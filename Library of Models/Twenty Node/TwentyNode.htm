@@ -57,15 +57,17 @@
 </head>
 <body>
   <h2>Twenty Node Model</h2>
-  <p>The model contains:<br></p>
+  <p>The model includes transmission and distribution voltage levels from 400 kV down to 10 kV. It comprises the following power system elements:</p>
   <ol class="spaced">
     <li class="item5">Twenty nodes - five 400 kV, seven 110 kV, one 35 kV, two 15.75 kV, one 10.5 kV and four 10 kV. </li> 
-    <li class="item5">three synchronous generating units - two hydro units with salient‑pole rotors and one thermal unit with a cylindrical rotor; </li>
+    <li class="item5">Three synchronous generating units - two hydro units with salient‑pole rotors and one thermal unit with a cylindrical rotor; </li>
+    <li class="item5">One static generator - used to model solar power plant;</li>
     <li class="item5">Six transformers - one three winding and five two winding;</li> 
     <li class="item5">Fourteen lines - five 400 kV, six 110 kV, and three 10 kV;</li> 
     <li class="item5">Seven loads [MW/Mvar] - 300/100, 240/80, 150/50/, 90/30, 60/20, 30/10, 1.5/0.5;</li> 
     <li class="item5">External system which is system swing machine.</li> 
   </ol>
+  <p>Single line diagram with power flow calculation results is given in the following figure.</p>
    <img src="20Node.png" alt="Twenty Node Model Figure"><br>
   <p>For transient stability calculation, three phase short circuit is simulated on the one of the lines between nodes <b>Node 1</b> and <b>Node 2</b>. Fault occurs at t=1 s and is cleared at t=1.15 s by disconnecting the faulted line.</p>
   <a href="20 node.zip" download>
