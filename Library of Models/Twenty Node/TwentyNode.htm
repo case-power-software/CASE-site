@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../../case.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>Twenty Node Model</title>
+  <style>
+    /* List with spacing */
+    .spaced li {
+      margin-bottom: 10px;   /* adds vertical spacing */
+      line-height: 1.4;      /* improves readability */
+    }
 
+    /* List without spacing (default browser rendering) */
+    .compact li {
+      margin-bottom: 0;      /* no extra spacing */
+      line-height: 1.0;      /* tight text */
+    }
+  </style>
+  <style>
+    /* General list reset */
+    ol {
+      margin: 0;              /* remove default top/bottom margins */
+      padding-left: 20px;     /* keep indentation */
+    }
+
+    /* Default list item style */
+    ol li {
+      line-height: 1.2;       /* tighter line spacing */
+    }
+
+    /* Adjust spacing individually */
+    li.item1 {
+      margin-bottom: 2px;     /* small gap after first item */
+      color: darkblue;        /* optional styling */
+    }
+
+    li.item2 {
+      margin-bottom: 8px;     /* larger gap after second item */
+      font-weight: bold;      /* optional styling */
+    }
+
+    li.item3 {
+      margin-bottom: 0;       /* no gap after third item */
+      font-style: italic;     /* optional styling */
+    }
+
+    li.item4 {
+      margin-bottom: 4px;     /* moderate gap */
+      text-decoration: underline; /* optional styling */
+    }
+
+    li.item5 {
+      margin-bottom: 4px;     /* moderate gap */
+    }
+  </style>
+</head>
+<body>
+  <h2>Twenty Node Model</h2>
+  <p>The model contains:<br></p>
+  <ol class="spaced">
+    <li class="item5">Twenty nodes - five 400 kV, seven 110 kV, one 35 kV, two 15.75 kV, one 10.5 kV and four 10 kV. </li> 
+    <li class="item5">three synchronous generating units - two hydro units with salient‑pole rotors and one thermal unit with a cylindrical rotor; </li>
+    <li class="item5">Six transformers - one three winding and five two winding;</li> 
+    <li class="item5">Fourteen lines - five 400 kV, six 110 kV, and three 10 kV;</li> 
+    <li class="item5">Seven loads [MW/Mvar] - 300/100, 240/80, 150/50/, 90/30, 60/20, 30/10, 1.5/0.5;</li> 
+    <li class="item5">External system which is system swing machine.</li> 
+  </ol>
+   <img src="20Node.jpg" alt="Twenty Node Model Figure"><br>
+  <p>For transient stability calculation, three phase short circuit is simulated on the one of the lines between nodes <b>Node 1</b> and <b>Node 2</b>. Fault occurs at t=1 s and is cleared at t=1.15 s by disconnecting the faulted line.</p>
+  <a href="20 node.zip" download>
+  <button>Download Twenty Node Model</button>
+</a>
+
+</body>
+</html>
