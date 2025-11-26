@@ -12,6 +12,21 @@
    <div style="text-align: center;">
   <img src="Figures/VoltageStabilityModel.png" alt="Voltage Stability Model" width="1100" height="1100">
   </div>
+
+  <video id="VoltageStabilityVideo" src="VoltageStabiilty.mp4" autoplay muted playsinline></video>
+<script>
+  const v = document.getElementById('VoltageStabilityVideo');
+  // Ensure it restarts exactly at the end
+  v.addEventListener('ended', () => {
+    v.currentTime = 0;
+    v.play();
+  });
+
+  // Optional: start when metadata is ready
+  v.addEventListener('loadedmetadata', () => {
+    v.currentTime = 0;
+  });
+</script>
 </body>
 
 </html>
