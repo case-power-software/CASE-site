@@ -67,7 +67,7 @@
   </script>
 </head>
 <body>
-  <div style="text-align: center;">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
   <img src="CASE logo - white - cropped.png" alt="CASE Logo" width="400" height="380">
   <video id="srcVideo" src="Videos/MovingEvent.mp4" preload="auto" muted playsinline></video>
   <canvas id="canvas" width="1000" height="500"></canvas>
@@ -138,10 +138,9 @@
       video.play();          // continue playing
     }
   });
-  </script>
-
-   <script>
-    const video = document.getElementById('srcVideo');
+ 
+	// The first video at the top
+	const video = document.getElementById('srcVideo');
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
@@ -179,6 +178,7 @@ video.addEventListener('timeupdate', () => {
 </body>
 
 </html>
+
 
 
 
