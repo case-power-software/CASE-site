@@ -162,7 +162,7 @@ videoTop.addEventListener('timeupdate', () => {
     // Draw cropped frames to canvas
     videoTop.addEventListener('play', () => {
       function drawFrame() {
-        if (video.paused || video.ended) return;
+        if (videoTop.paused || videoTop.ended) return;
         // Crop rectangle from source video
         //ctx.drawImage(video, 100, 50, 400, 300, 0, 0, 400, 300);
 		ctx.drawImage(video, 100, 0,1100, 500, 0, 0, 1000, 500);
@@ -178,6 +178,7 @@ videoTop.addEventListener('timeupdate', () => {
 </body>
 
 </html>
+
 
 
 
