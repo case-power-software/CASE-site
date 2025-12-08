@@ -20,6 +20,17 @@
       text-decoration: underline;
     }
   </style>
+
+  <style>
+  canvas {
+      border: 1px solid #ccc;
+      display: block;
+    }
+	/* Hide the video element so only canvas is visible */
+    #srcVideo {
+      display: none;
+    }
+   </style>
   
   <!-- SEO meta tags -->
   <meta name="description" content="CASE is a C++ API Simulator for Electricity providing power flow, stability, and security analysis.">
@@ -58,6 +69,8 @@
 <body>
   <div style="text-align: center;">
   <img src="CASE logo - white - cropped.png" alt="CASE Logo" width="400" height="380">
+  <video id="srcVideo" src="Videos/MovingEvent.mp4" preload="auto" muted playsinline></video>
+  <canvas id="canvas" width="1000" height="500"></canvas>
   </div>
   <h1>CASE Web Site on GitHub (Under Construction)</h1>
   <p style="text-align: justify;">Welcome to CASE website hosted on GitHub. CASE is power system analysis software that performs almost all of power system calculations (see: <a href="About.htm">About CASE</a>) with interactive single line diagram implemented as object-oriented user interface. Compared to commercial software of the same type, CASE has original, easy to use, solutions regarding design and user interface (see: <a href="Application Design.htm">Application Design</a>). CASE provides the following types of power system calculations:<br>
@@ -127,12 +140,46 @@
   });
   </script>
 
+   <script>
+    const video = document.getElementById('srcVideo');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const startTime = 1;   // seconds
+	const endTime   = 27;  // seconds
+
+video.addEventListener('loadedmetadata', () => {
+  video.currentTime = startTime;
+  video.play();
+});
+
+video.addEventListener('timeupdate', () => {
+  if (video.currentTime >= endTime) {
+    video.currentTime = startTime; // jump back
+    video.play();                  // restart
+  }
+});
+
+    // Draw cropped frames to canvas
+    video.addEventListener('play', () => {
+      function drawFrame() {
+        if (video.paused || video.ended) return;
+        // Crop rectangle from source video
+        //ctx.drawImage(video, 100, 50, 400, 300, 0, 0, 400, 300);
+		ctx.drawImage(video, 100, 0,1100, 500, 0, 0, 1000, 500);
+        requestAnimationFrame(drawFrame);
+      }
+      drawFrame();
+    });
+  </script>
+
   <div class="contact">
     <a href="contact.htm">Contact</a>
   </div>
 </body>
 
 </html>
+
 
 
 
