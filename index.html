@@ -140,27 +140,27 @@
   });
  
 	// The first video at the top
-	const video = document.getElementById('srcVideo');
+	const videoTop = document.getElementById('srcVideo');
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
     const startTime = 1;   // seconds
 	const endTime   = 27;  // seconds
 
-video.addEventListener('loadedmetadata', () => {
-  video.currentTime = startTime;
-  video.play();
+videoTop.addEventListener('loadedmetadata', () => {
+  videoTop.currentTime = startTime;
+  videoTop.play();
 });
 
-video.addEventListener('timeupdate', () => {
-  if (video.currentTime >= endTime) {
-    video.currentTime = startTime; // jump back
-    video.play();                  // restart
+videoTop.addEventListener('timeupdate', () => {
+  if (videoTop.currentTime >= endTime) {
+    videoTop.currentTime = startTime; // jump back
+    videoTop.play();                  // restart
   }
 });
 
     // Draw cropped frames to canvas
-    video.addEventListener('play', () => {
+    videoTop.addEventListener('play', () => {
       function drawFrame() {
         if (video.paused || video.ended) return;
         // Crop rectangle from source video
@@ -178,6 +178,7 @@ video.addEventListener('timeupdate', () => {
 </body>
 
 </html>
+
 
 
 
