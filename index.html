@@ -23,7 +23,8 @@
 
   <style>
   canvas {
-      border: 1px solid #ccc;
+      <!--border: 1px solid #ccc;-->
+	  border:none;
       display: block;
     }
 	/* Hide the video element so only canvas is visible */
@@ -165,7 +166,7 @@ videoTop.addEventListener('timeupdate', () => {
         if (videoTop.paused || videoTop.ended) return;
         // Crop rectangle from source video
         //ctx.drawImage(videoTop, 100, 50, 400, 300, 0, 0, 400, 300);
-		ctx.drawImage(videoTop, 100, 0,1100, 500, 0, 0, 1000, 500);
+		ctx.drawImage(videoTop, 100, 1,1100, 500, 0, 1, 1000, 500);
         requestAnimationFrame(drawFrame);
       }
       drawFrame();
@@ -178,6 +179,7 @@ videoTop.addEventListener('timeupdate', () => {
 </body>
 
 </html>
+
 
 
 
