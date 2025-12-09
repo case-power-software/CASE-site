@@ -19,6 +19,17 @@
     .contact a:hover {
       text-decoration: underline;
     }
+	  /* List with spacing */
+    .spaced li {
+      margin-bottom: 10px;   /* adds vertical spacing */
+      line-height: 1.4;      /* improves readability */
+    }
+
+    /* List without spacing (default browser rendering) */
+    .compact li {
+      margin-bottom: 0;      /* no extra spacing */
+      line-height: 1.0;      /* tight text */
+    }
   </style>
 
   <style>
@@ -75,7 +86,7 @@
   </div>
   <h1>CASE Web Site on GitHub (Under Construction)</h1>
   <p style="text-align: justify;">Welcome to CASE website hosted on GitHub. CASE is power system analysis software that performs almost all of power system calculations (see: <a href="About.htm">About CASE</a>) with interactive single line diagram implemented as object-oriented user interface. Compared to commercial software of the same type, CASE has original, easy to use, solutions regarding design and user interface (see: <a href="Application Design.htm">Application Design</a>). CASE provides the following types of power system calculations:<br>
-  <ul>
+  <ul class="spaced">
   <li><a href="Power System Calculations/PowerFlow.htm" style="margin-left: 20px;">
     Power (Load) Flow - AC and DC </a></li>
    <li><a href="Power System Calculations/ShortCircuits.htm" style="margin-left: 20px;">Short Circuits</a></li> 
@@ -90,7 +101,7 @@
     <li><a href="Power System Calculations/EnergyPLAN.html" style="margin-left: 20px;">EnergyPLAN Scenarios Analysis</a></li>
 </ul>
   <h3>Unique Application Features</h3>
-  <ul>
+  <ul class="spaced">
     <li>Graphical display of all power system overloads and voltage limit violations in a single view, regardless of system size.</li>
     <li>Transient stabiity events like short circuits and their clearing are displayed as graphical objects that users can drag and drop across the single‑line diagram, whether to different points on the same element or to another element. The video above demonstrates this application feature.</li>
 	<li>Coupling with EnergyPLAN application - the article related to this implementation has been published in the open-access scientific journal <em>Energy Conversion and Management: X</em>. The article is available at the following link: <a href="https://www.sciencedirect.com/science/article/pii/S2590174525004301">Coupling of the planning and power system analysis software for high-level penetration of renewable energy sources</a></li>
@@ -180,6 +191,7 @@ videoTop.addEventListener('timeupdate', () => {
 </body>
 
 </html>
+
 
 
 
