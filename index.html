@@ -73,6 +73,35 @@
       }
     }
 	</style>
+
+	<style>
+	.grid-container {
+      display: grid;
+      grid-template-columns: 200px 200px 200px; /* fixed widths for 3 columns */
+      gap: 2rem;                               /* space between columns */
+    }
+
+    .column {
+      text-align: left;
+    }
+
+    .column h2 {
+	  display: inline-block;          /* shrink to fit text */
+      margin-bottom: 0.5rem;
+      font-size: 18px;
+      border-bottom: 2px solid #333; /* underline header */
+    }
+
+    .column ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .column li {
+      margin: 0.25rem 0;
+    }
+	</style>
   
   <!-- SEO meta tags -->
   <meta name="description" content="CASE is a C++ API Simulator for Electricity providing power flow, stability, and security analysis.">
@@ -130,11 +159,43 @@
     <li><a href="Power System Calculations/NetworkReduction.html" style="margin-left: 20px;">Network Reduction</a></li>
     <li><a href="Power System Calculations/EnergyPLAN.html" style="margin-left: 20px;">EnergyPLAN Scenarios Analysis</a></li>
 </ul>
+
+	 <div class="grid-container">
+    <div class="column">
+      <h2>Power Flow and Power Flow Based Functions</h2>
+      <ul>
+        <li><a href="Power System Calculations/PowerFlow.htm" style="margin-left: 20px;">
+    Power (Load) Flow - AC and DC </a></li>
+        <li><a href="Power System Calculations/SecurityAnalysis.html" style="margin-left: 20px;">N-1 and N-X Security Analysis</a></li>
+        <li><a href="Power System Calculations/NTC.html" style="margin-left: 20px;">Neto Transfer Capacity (NTC)</a></li>
+        <li><a href="Power System Calculations/PTDFandOTDF.html" style="margin-left: 20px;">PTDF and OTDF Calculation</a></li>
+		<li><a href="Power System Calculations/NetworkReduction.html" style="margin-left: 20px;">Network Reduction</a></li>
+		<li><a href="Power System Calculations/EnergyPLAN.html" style="margin-left: 20px;">EnergyPLAN Scenarios Analysis</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h2>Faults</h2>
+      <ul>
+        <li><a href="Power System Calculations/ShortCircuits.htm" style="margin-left: 20px;">Short Circuits</a></li>
+        <li><a href="Power System Calculations/OpenConductorFaults.htm" style="margin-left: 20px;">Open Conductor Faults</a></li>
+      </ul>
+    </div>
+    <div class="column">
+      <h2>Stability</h2>
+      <ul>
+        <li><a href="Power System Calculations/TransientStability.htm" style="margin-left: 20px;">Transient Stability</a></li>
+        <li><a href="Power System Calculations/SmallSignalStability.html" style="margin-left: 20px;">Small-Signal Stability</a></li>
+        <li><a href="Power System Calculations/VoltageStability.html" style="margin-left: 20px;">Voltage Stability</a></li>
+       </ul>
+    </div>
+  </div>
+
+	
   <h3>Unique Application Features</h3>
   <ul class="spaced">
     <li>Graphical display of all power system overloads and voltage limit violations in a single view, regardless of system size.</li>
     <li>Transient stabiity events like short circuits and their clearing are displayed as graphical objects that users can drag and drop across the single‑line diagram, whether to different points on the same element or to another element. The video above demonstrates this application feature.</li>
-	<li>Coupling with EnergyPLAN application - the article related to this implementation has been published in the open-access scientific journal <em>Energy Conversion and Management: X</em>. The article is available at the following link: <a href="https://www.sciencedirect.com/science/article/pii/S2590174525004301">Coupling of the planning and power system analysis software for high-level penetration of renewable energy sources</a></li>
+	<li>Coupling with EnergyPLAN application - the article related to this implementation has been published in the open-access scientific journal <em><strong></strong>Energy Conversion and Management: X</strong></em>. The article is available at the following link: <a href="https://www.sciencedirect.com/science/article/pii/S2590174525004301">Coupling of the planning and power system analysis software for high-level penetration of renewable energy sources</a></li>
   </ul>
   </p><br>
   <a style="margin-left: 20px"; href="Library of Models/LibraryOfModels.htm">📁 Library of Models</a>
@@ -221,6 +282,7 @@ videoTop.addEventListener('timeupdate', () => {
 </body>
 
 </html>
+
 
 
 
