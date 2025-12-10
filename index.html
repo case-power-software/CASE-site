@@ -43,6 +43,36 @@
       display: none;
     }
    </style>
+
+	<style>
+		.functions-grid {
+      display: grid;
+      /*grid-template-columns: repeat(3, 1fr);*/ /* three equal columns */
+	  grid-template-columns: 250px 250px; /* widths of columns are 250 px */
+      gap: 0.5rem 2rem;                      /* row and column spacing */
+      <!--list-style: none;  -->                    /* remove bullets */
+      margin: 0;
+      padding: 0;
+    }
+
+    .functions-grid li {
+      text-align: left;                      /* left-justified text */
+      padding: 0.25rem 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .functions-grid {
+        grid-template-columns: repeat(2, 1fr); /* two columns on medium screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .functions-grid {
+        grid-template-columns: 1fr; /* single column on small screens */
+      }
+    }
+	</style>
   
   <!-- SEO meta tags -->
   <meta name="description" content="CASE is a C++ API Simulator for Electricity providing power flow, stability, and security analysis.">
@@ -86,7 +116,7 @@
   </div>
   <h1>CASE Web Site on GitHub (Under Construction)</h1>
   <p style="text-align: justify;">Welcome to CASE website hosted on GitHub. CASE is power system analysis software that performs almost all of power system calculations (see: <a href="About.htm">About CASE</a>) with interactive single line diagram implemented as object-oriented user interface. Compared to commercial software of the same type, CASE has original, easy to use, solutions regarding design and user interface (see: <a href="Application Design.htm">Application Design</a>). CASE provides the following types of power system calculations:<br>
-  <ul class="spaced">
+  <ul class="functions-grid">
   <li><a href="Power System Calculations/PowerFlow.htm" style="margin-left: 20px;">
     Power (Load) Flow - AC and DC </a></li>
    <li><a href="Power System Calculations/ShortCircuits.htm" style="margin-left: 20px;">Short Circuits</a></li> 
@@ -191,6 +221,7 @@ videoTop.addEventListener('timeupdate', () => {
 </body>
 
 </html>
+
 
 
 
