@@ -20,20 +20,15 @@
 </head>
 <body>
   <h2>Transient Stability</h2>
-  <p>Transient stability is ability of power system to regain acceptable equilibrium state after being subjected to a severe disturbance. It determines whether synchronous generators remain in synchronism after a severe disturbance, i.e. short-circuit, by simulating their dynamic response and the network’s evolution in time. Transient stability involves solving the nonlinear differential equations of generator rotor dynamics and network algebraic equations over time, to determine if the system settles into a new stable operating point or loses synchronism. Initial operating point for transient stability is the results of power flow calculation.</p>
+  <p>Transient stability is ability of power system to regain acceptable equilibrium state after being subjected to a severe disturbance. It determines whether synchronous generators remain in synchronism after a severe disturbance, i.e. short-circuit, by simulating their dynamic response and the network’s evolution in time. Transient stability involves solving the nonlinear differential equations of generator rotor dynamics and network algebraic equations over time, to determine if the system settles into a new stable operating point or loses synchronism. Initial operating point for transient stability is the result of power flow calculation.</p>
+  <p>Transient stability analysis in CASE is implemented through the partitioned method by which the network algebraic equations and generator differential equations are solved alternately. The dataset of generating‑unit parameters required for transienty stability analysis is far more extensive than those needed in other types of power system calculations, such as power flows and short circuits</p>
+  <p>General remarks about transient stability analysis are as follows:</p>
   <ol class="spaced">
-  <li><b>Complete</b> - Results of load flow calculation, i.e. calculated voltages, are taken into account.</li>
-  <li><b>Flat</b> - All node voltages are assumed to be 1.0 pu. The method is widely used and follows IEC 60909‑0.</li>
+  <li>Synchronous generating units are modeled using extended six-order model;</li>
+  <li>Single and double cage induction machine models are available;</li>
+  <li>Doubly-fed induction generators (DFIG) is available as well;</li>
+  <li>Generating units with full-converter connections, such as those in solar and synchronous generator wind power plants, are modelled as controlled power injections.</li>
+    <li>The ZIP (constant impedance-Z, constant current-I, constant power-P) model of loads is used. Exponential loads are converted into constant impedance type (Z) loads for transient stability analysis.</li>
   </ol>
-  <p>CASE supports short-circuit simulations at buses and lines. There are four types of short-circuits:</p>
-  <ol class="spaced">
-  <li>Three phase</li>
-  <li>Single phase to ground</li>
-  <li>Two phases</li>
-  <li>Two phases to ground</li>
-  </ol>
-  <p>All four types of short-circuits are illustrated in the next figure.</p>
-  <img src="ShortCircuits.jpg" alt="Types of short circuits" width="1150" height="716">
-  <p>In CASE, users can specify the fault impedance for simulations. Default fault impedance is zero.</p>
   </body>
 </html>
