@@ -84,6 +84,18 @@
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 900px) { 
+	.top-section { 
+		flex-direction: column; 
+	} 
+}
+
+.top-section { 
+	display: flex; justify-content: center; align-items: center; gap: 20px; 
+} 
+@media (max-width: 900px) { .top-section { flex-direction: column;  }}
+canvas { width: 100%; height: auto; max-width: 1000px; }
+		
 	</style>
 
 	<style>
@@ -152,12 +164,13 @@
   </script>
 </head>
 <body>
-  <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <!--<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">-->
+  <div class="top-section">	
   <img src="CASE logo - white - cropped.png" alt="CASE Logo" width="400" height="380">
   <video id="srcVideo" src="Videos/MovingEvent.mp4" preload="auto" muted playsinline></video>
   <canvas id="canvas" width="1000" height="500"></canvas>
   </div>
-  <h1>CASE Web Site on GitHub (Under Construction)</h1>
+  <h1>CASE Web Site on GitHub (Under Construction-29.12.2025, 9:20)</h1>
   <p style="text-align: justify;">Welcome to CASE website hosted on GitHub. CASE is power system analysis software that performs almost all of power system calculations (see: <a href="About.htm">About CASE</a>) with interactive single line diagram implemented as object-oriented user interface. Compared to commercial software of the same type, CASE has original, easy to use, solutions regarding design and user interface (see: <a href="Application Design.htm">Application Design</a>). CASE provides the following types of power system calculations:<br>
   <!--<ul class="functions-grid">
   <li><a href="Power System Calculations/PowerFlow.htm" style="margin-left: 20px;">
@@ -297,6 +310,7 @@ videoTop.addEventListener('timeupdate', () => {
 </body>
 
 </html>
+
 
 
 
